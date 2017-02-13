@@ -198,7 +198,7 @@ CSS illustration et article
     border: 4px solid #2d1f17;
     /*Arrondir les bords de l'image*/
     border-top-left-radius: 60px;
-    border-bottom-right-radius: 60px;
+    border-bottom-right-radius: 58px;
 }
 
 .article{
