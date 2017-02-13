@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif');
+/*-------------------------------------------------------------------------------------------------------------------------------------
+Dans cette feuille de style CSS, je vais pouvoir définir l'apparence que je veux donner aux différents éléments qui composent ma page !
+
+### La Syntaxe ###
+
+element {
+    propriete:valeur;
+}
+------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* -- Je cible dans ma page HTML tous mes éléments a, tous mes éléments h1 et tous mes éléments h3 -- */
+a, h1, h5{
+    font-family: 'PT Serif', serif;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------
+###Cibler via la classe de l'élément ###
+NB : Une même classe peut être présente plusieurs fois sur une même page.
+
+.LaClasse {
+    propriete:valeur;
+}
+
+Consigne :
+    1- Tous les liens de classe HEADER en Noir
+    2- Non soulignés
+    3- Affichés en ligne via la propriété display */
+
+.header a {
+    
+    /* Plusieurs façons de définir une couleur */
+    
+    /* Par un mot clé de la couleur */
+   color:white;
+    
+    /* Par la notation hexadicimale 
+    color:#000000;
+    color: #000;*/
+    
+    /* Par la notation décimale 
+    color:rgb(000,000,000);*/
+    
+    /* Enlever le soulignement */
+        text-decoration: none;
+    
+    /* Modifier la taille d'une police */
+    font-size: 20px;
+    
+    /*Je souhaite que mes liens s'affichent en majuscule */
+    text-transform: uppercase;
+    
+    
+        
+}
+
+/*Je souhaite aligner les éléments via la prorpiété display */
+
+.header ul{
+    margin:0;
+    padding:10px 0;
+    background:#2d1f17;
+}
+.header ul li {
+    display:inline-block;
+  
+    /* WIDTH : me permet de définir la largeur d'un élément */
+   width: 317px;
+    
+    /* Aligner mon texte dasn son élément */ 
+    text-align: center;
+}
+
+a{
+    color:white;
+}
+a:hover {
+    /* hover : s'applique au survol de la souris */
+    color:#838f19;
+}
+
+/* Je change la couleur de mon lien à l'intérieur de la classe current*/
+.header ul li.current a{
+    color:#838f19;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------
+### Cibler via son ID un élément ###
+NB : Un ID ne peut être présent qu'une seule fois sur une même page.
+
+
+#MonID {
+    propriete:valeur;
+}
+------------------------------------------------------------------------------------------------------------------------*/
+
+#page {
+    
+    
+    /*Pour centrer un élément de type bloc on utlise :    margin:0 auto
+    Pour centrer un élément de type inline on utilise :   text-align:center
+    /* Je vais définir la largeur de ma page */
+    width:960px;
+        
+    /*margin : <top/bottom> <left/right>;*/
+    margin: 0px auto;
+    
+    /*Je rajoute à ma page un fond blanc*/
+    background:white;
+}
+
+/*Je souhaite changer la couleur de ma page */
+body {
+    background-color:#838f19; 
+}
+
+
+/*Consigne :
+1 - A ma div#page, ajouter une marge top/bottom de 40 px;
+2 - Ajouter avec la propriété border-radius un arrondi de 5px à div#page
+3 - Puis, grâce a box-shadow, ajouter une ombre légère autour de div#page */
+
+#page {
+   /* margin: <top> <right> <bottom> <left>; */
+    margin: 40px auto 40px auto;
+   
+    /*-- border-radius me permet de rajouter un arrondi à mon élément -- */
+    border-radius: 5px;
+    
+    /*-- box-shadow me permet de rajouter une ombre autour de ma div#page -- */
+    /*-- offset-x | offset-y | blur-radius | color --*/
+    box-shadow: 0px 0px 15px black;
+    
+    /* -- J'applique une marge interne de 5px autour de la div#page -- */
+    padding:5px;
+    
+    /*-- Overflow avec la valeur hidden, va supprimer l'affichage de tous les éléments qui dépassent de la div#page*/
+    overflow: hidden;
+}
+
+.contenu h1{
+    /* -- Aligner mon titre au milieu -- */
+    text-align:center;
+    
+    /*Je ne souhaite pas que le texte soit en gras */
+    font-weight: normal;
+    
+    /* -- Je souhaite une bordur en bas de mon titre --*/
+    /* -- solid: Ligne par défaut, dotted : Petits points, dashed: des traits d'union--*/
+    border-bottom: 1px dashed #000;
+}
+ 
+/* -- Style du bandeau du haut -- */
+.BandeauDuHaut{
+    
+    width: 100%;
+    height: 359px;
+    
+    /*-- Background URL me permet d'insérer une image en fond de mon élément --*/
+    background: url(../img/anse-dufour.jpg) no-repeat;
+    background-size: cover;
+    background-position: 0 -260px;
+}
+/*-----------------------------------------------------------------------------------
+CSS illustration et article
+-----------------------------------------------------------------------------------*/
+
+/*--La premiere chose à faire dans un bloc CSS est le positionnement (hauteur largeur) puis la décoration -- */
+/*--Quand on travaille avec des images soit on définit la largeur soit on définit la hauteur mais pas les 2 en même temps ! (risque de déformer l'image)--*/
+/*--Dans le cas de l'oblligation de mettre les 2 on utilise la propriété object-fit:cover --*/
+
+
+/*Mettre côte à côte l'image et  le paragraphe*/
+.contenu {
+/*--Positionnement --*/
+    width: 100%;
+    height: auto;
+    float: left;
+/*--Décoration --*/
+}
+
+.contenu h1 {
+    text-align: center;
+    font-weight: normal;
+    border-bottom: 1px dashed #000;
+    color: #838f19;
+}
+.illustration{
+/*Positionnement*/
+    width: 460px;
+    float: left;
+/*Décoration*/
+    margin-right: 10px;
+}
+
+.illustration img{
+    max-width: 460px ;
+    border: 4px solid #2d1f17;
+    /*Arrondir les bords de l'image*/
+    border-top-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+}
+
+.article{
+    width: 460px;
+    float:left;
+    margin: 0 10px 0 10px;
+    font-family: Arial, sans-serif;
+    text-align: justify;
+    font-size: 13px;
+}
+
+/*Modifier la couleur du fond et la couleur du texte*/
+.footer{
+    width: 100%;
+    height: 220px;
+    float: left;
+    margin-top: 140px;
+    background: #2d1f17;
+    color: white;
+}
+
+/*----------Style de mon pied de page-------*/
+/*Aligner les éléments de la div footer*/
+/*Cacul automatique avec calc Exemple : calc((100%/3) - 10px) ---> Ne pas oublier l'espace avant et après le -   /*
+
+
+/*Google Map*/
+.gmap{
+    max-width: 30%;
+    height: auto;
+    float: left;
+    margin: 40px 10px 40px 10px;
+}
+
+/*Formulaire*/
+form {
+    width: 30%;
+    height: auto;
+    float: left;
+}
+
+.newsletter  {
+    width: 30%;
+    height: auto;
+    float: left;
+    margin: 40px 10px 40px 45px;
+ }
+
+.newsletter fieldset {
+    width: 30%x;
+    height: auto;
+    float: left; 
+    border-radius: 10px;
+    height: 140px;
+}
+
+/*--Espacer les input--*/
+.newsletter input[type=mailto], .newsletter input[type=text]{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/*--Agit sur les input de type submit--*/
+.newsletter input[type=submit]{
+    width: 100%;
+    margin-top: 15px;
+    border: 0;
+    background: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+     border-radius: 10px;
+}
+/*Contact*/
+.contact{
+    width: 30%;
+    height: auto;
+    float: right;
+    margin: 40px 10px 50px 10px;
+}
+
+
+
+
+
+
+
+
+

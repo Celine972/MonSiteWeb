@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Page HTML</title>
+        <!--Méthode 1 : Ajouter un fichier CSS à ma page-->
+        <link rel="stylesheet" href="css/styles.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>            
+        <body>
+            <div id="page">
+                <div class="header">
+                    <div class="BandeauDuHaut"></div>
+                     <!--Menu-->
+                    <ul>
+                        <li class="current"><a href="index.html">Accueil</a></li>
+                        <li><a href="#">Présentation</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    
+                </div>
+                <!--Fin classe header-->
+                <div class="contenu">
+                   <h1>Anse Dufour</h1>
+                    <div class="illustration">
+                        <img src="img/martinique01.jpg" alt="Anse Dufour">
+                    </div>
+                    <div class="article">
+                        <p>Le plaisir d’une escapade à l’Anse Dufour et à l’anse Noire voisine commence au sommet du morne Bigot quand il s’agit d’emprunter le mauvais ruban d’asphalte qui serpente sur les flancs de la ravine et descend parfois abruptement vers le rivage.</p> 
+                        <p> <span>Quelques arbres majestueux,</span> des maisons isolées, un hameau, beaucoup de tournants, quelques cahots, et puis d’un coup, au détour d’un virage, une longue descente rectiligne plongeant vers l’océan avec une vue panoramique somptueuse sur la mer Caraïbe et ses eaux turquoise.</p>
+                        <p>Aux pieds de l’éperon rocheux sur lequel s’achève la route, cachée par un rideau d’arbres, se devine à travers les branches une petite crique au sable doré devant laquelle paressent  au mouillage quelques barques de pêche. Un escalier et une rampe pour les personnes en fauteuil permettent d’y accéder.</p>
+                        <p>En contrebas, <span>quelques cabanes de pêcheurs</span> serrées les unes contre les autres sur la gauche, deux bars restaurants à l’ambiance surannée sur la droite, et puis la plage, petite mais superbe avec ses gommiers en équilibre sur leurs rondins, toujours prêts à partir vers le large.</p>
+                    </div>
+                </div>
+                  <div class="footer">
+                    <!--Intégrer Google Map en faisant un copier/coller du code depuis google map-->
+                        
+                        <div class="gmap">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.258839561166!2d-61.08934904424887!3d14.527174992218368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c401daad9a6184b%3A0xa48041ff98d6f954!2sAnse+Dufour!5e0!3m2!1sfr!2s!4v1483451309255" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                            <!--Formulaire Newsletter-->
+                            <div class="newsletter">
+                            <form name="FormNewsletter" action="EnvoiDesInfos.php" method="POST">
+                            <fieldset>
+                                <legend>Newsletter</legend>
+                                <input type="text" name="nom" placeholder="Nom">
+                                <input type="text" name="prenom" placeholder="Prénom">
+                                <input type="email" name="Email" placeholder="Email" required>
+                                <input type="submit" value="M'inscrire !">
+                            </fieldset>
+                           </form>
+                            </div>
+                                <div class="contact">
+                                    <h5>Contactez-nous</h5>
+                                    <adresse>
+                                        <strong>Anse Dufour</strong><br>
+                                        <a href="tel:+5960696584758"> <i class="fa fa-phone" aria-hidden="true"></i> 0696 58 47 58</a><br>
+                                        <a href="mailto:contact@gmail.com">contact@gmail.com</a><br>
+                                        97235 Anse Dufour
+                                        Martinique
+                                    </adresse>
+                                </div>
+                                
+                    </div>                                           
+            </div>
+        </body>
+</html>
